@@ -5,7 +5,8 @@ app = FastAPI(title="agentic-ai-poc")
 
 @app.get("/agentic-ai")
 def read_root():
-    return "Hello, World!"
+    # Updated per JIRA-1: should return the specified welcome message
+    return "Hellow, Welcome to Agentic AI World"
 
 # Entry point helper for uvicorn;
 # You can still run: uvicorn main:app --port 9000
