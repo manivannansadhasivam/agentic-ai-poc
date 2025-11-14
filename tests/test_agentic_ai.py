@@ -3,8 +3,8 @@ from main import app
 
 client = TestClient(app)
 
-def test_root():
+def test_agentic_ai_welcome_message():
     resp = client.get("/agentic-ai")
     assert resp.status_code == 200
-    # Updated expectation per JIRA-1
+    # Expected message per JIRA-1 specification
     assert resp.json() == "Hellow, Welcome to Agentic AI World"
