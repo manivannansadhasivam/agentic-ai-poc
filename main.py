@@ -3,7 +3,7 @@ import uvicorn
 
 app = FastAPI(title="agentic-ai-poc")
 
-@app.get("/")
+@app.get("/agentic-ai")
 def read_root():
     return "Hello, World!"
 
