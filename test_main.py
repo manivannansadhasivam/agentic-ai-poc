@@ -4,6 +4,6 @@ from main import app
 client = TestClient(app)
 
 def test_root():
-    resp = client.get("/")
+    resp = client.get("/agentic-ai")
     assert resp.status_code == 200
-    assert resp.json() == {"message": "hello world"}
+    assert resp.json() == "Hello, World!"
