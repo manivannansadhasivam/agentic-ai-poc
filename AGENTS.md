@@ -1,6 +1,6 @@
 # Agent Bug Fix Workflow Guide
 
-Well-structured, tool-driven process for fixing exactly ONE Jira bug per session using MCP tools (no raw shell commands). All runtime actions must occur inside the local Python virtual environment `.venv`. If `.venv` does not exist, create it before proceeding (environment initialization MCP tool). 
+Tool-driven process for fixing exactly ONE Jira bug per session using MCP tools (no raw shell commands). All runtime actions must occur inside the local Python virtual environment `.venv`. If `.venv` does not exist, create it before proceeding (environment initialization MCP tool). 
 
 ---
 ## 1. Single-Issue Enforcement
@@ -32,8 +32,7 @@ Dependency handling (Package Install MCP tool):
 Before any commit:
 1. Environment configured (active interpreter inside `.venv`).
 2. Dependencies installed.
-3. Test suite execution PASS (Test Run MCP tool).
-4. Optional application smoke start (Run/Launch MCP tool) and health check request to `/agentic-ai` returns expected payload.
+3. Test suite execution PASS.
 
 If ANY gate fails → fix first, then re-run. No commits on red builds.
 
@@ -112,13 +111,12 @@ Do not partially proceed—abort cleanly.
 1. Single Jira ID confirmed.
 2. Branch `fb_<JIRA-ID>` ready.
 3. `.venv` exists & active.
-4. Dependencies installed (pinned versions).
-5. Failing test added (red).
-6. Minimal fix applied.
-7. Tests green.
-8. Commit (conventional format).
-9. PR opened with template.
-10. Await review; maintain green state.
+4. Dependencies Verified.
+5. Fix applied.
+6. Tests green.
+7. Commit.
+8. PR opened with template.
+9. Await review; maintain green state.
 
 ---
 ## 11. FAQ
