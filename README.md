@@ -15,9 +15,13 @@ pip install -r requirements.txt
 
 ## Run
 ```powershell
-uvicorn main:app --reload --port 8000
+uvicorn main:app --reload --port 9000
 ```
-Visit: http://127.0.0.1:8000/
+Or simply:
+```powershell
+python main.py
+```
+Visit: http://127.0.0.1:9000/
 
 ## Test
 ```powershell
