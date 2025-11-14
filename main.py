@@ -6,8 +6,10 @@ app = FastAPI(title="agentic-ai-poc")
 
 @app.get("/agentic-ai")
 def read_root():
-    # fix(JIRA-3): Return a structured JSON payload for extensibility and proper JSON media type instead of a raw string.
-    return JSONResponse(content={"message": "Hello, Welcome to Agentic AI World"})
+    # fix(JIRA-3): Correct welcome message per Jira; keep structured JSON for future extensibility.
+    # Previous response: {"message": "Hello, Welcome to Agentic AI World"}
+    # Root cause: Hardcoded incorrect greeting string not matching product spec.
+    return JSONResponse(content={"message": "Hello World"})
 
 # Entry point helper for uvicorn;
 # You can still run: uvicorn main:app --port 9000
